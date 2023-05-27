@@ -9,6 +9,9 @@ int search( ) {
   while (left <= right) {
     mid = 0.5 * (left + right);
     if (a[mid] == key) {
+      while (a[mid - 1] == key) {
+        mid--;
+      }
       return mid;
     } else if (a[mid] < key) {
       left = mid + 1;
